@@ -1,0 +1,256 @@
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        
+        .container-responsive {
+            padding: 0 clamp(20px, 8vw, 140px);
+            width: 100%;
+        }
+
+        
+        .navbar-custom {
+            background-color: #725F63;
+            padding: clamp(10px, 2vh, 20px) clamp(20px, 5vw, 50px);
+        }
+        
+        .navbar-brand {
+            color: white !important;
+            font-size: clamp(18px, 4vw, 24px) !important;
+            font-weight: 600;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-size: clamp(14px, 3vw, 16px) !important;
+        }
+        
+        .my-custom-btn {
+            background-color: #5d4c50;
+            border: none;
+            color: white;
+            padding: clamp(6px, 1.5vw, 10px) clamp(12px, 3vw, 20px);
+            font-size: clamp(12px, 2.5vw, 14px);
+        }
+
+        
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: clamp(20px, 5vh, 50px) 0;
+        }
+        
+        .home-content {
+            padding: 0 clamp(20px, 8vw, 80px);
+        }
+        
+        .home-title {
+            color: #725F63;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(48px, 12vw, 100px);
+            font-weight: bold;
+            margin-bottom: clamp(10px, 3vw, 20px);
+            line-height: 1.1;
+        }
+        
+        .home-subtitle {
+            color: #725F63;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(16px, 4vw, 30px);
+            line-height: 1.4;
+            margin-bottom: clamp(20px, 5vw, 40px);
+        }
+        
+        .home-image {
+            width: 100%;
+            max-width: clamp(200px, 40vw, 357px);
+            height: auto;
+            aspect-ratio: 357/369;
+            object-fit: cover;
+        }
+        
+        .decoration-image {
+            width: clamp(40px, 8vw, 80px);
+            height: auto;
+            margin-bottom: clamp(20px, 4vw, 50px);
+        }
+
+       
+        .section-title {
+            color: #725F63;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(32px, 8vw, 64px);
+            font-weight: 600;
+            margin-bottom: clamp(10px, 2vh, 20px);
+        }
+        
+        .section-line {
+            width: clamp(200px, 25vw, 330px);
+            height: auto;
+            margin-bottom: clamp(30px, 6vh, 60px);
+        }
+
+       
+        #about {
+            padding: clamp(50px, 10vh, 100px) 0;
+        }
+        
+        .about-text {
+            color: #725F63;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(16px, 4vw, 30px);
+            line-height: 1.5;
+            margin-bottom: clamp(30px, 6vh, 50px);
+        }
+        
+        .about-detail {
+            color: #725F63;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(14px, 3vw, 25px);
+            font-weight: 500;
+            margin-bottom: clamp(10px, 2vh, 15px);
+            margin-left: clamp(15px, 3vw, 30px);
+        }
+
+        #skills {
+            padding: clamp(50px, 10vh, 100px) 0;
+        }
+        
+        .skills-image {
+            width: 100%;
+            max-width: 1180px;
+            height: auto;
+            margin: clamp(30px, 6vh, 50px) 0;
+        }
+
+   
+        #project {
+            padding: clamp(50px, 10vh, 100px) 0;
+        }
+        
+        .project-card {
+            width: 100%;
+            max-width: clamp(280px, 80vw, 400px);
+            margin: 0 auto clamp(50px, 10vh, 100px) auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: clamp(200px, 40vw, 320px);
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: clamp(15px, 4vw, 25px);
+        }
+        
+        .project-title {
+            color: #725F63;
+            font-size: clamp(16px, 4vw, 20px);
+            margin-bottom: clamp(10px, 2vw, 15px);
+            font-weight: 600;
+        }
+        
+        .project-description {
+            color: #725F63;
+            font-size: clamp(14px, 3vw, 18px);
+            line-height: 1.5;
+            margin-bottom: clamp(15px, 3vw, 20px);
+        }
+        
+.project-btn {
+    background: #725F63 !important;
+    color: white !important;
+    padding: clamp(8px, 2vw, 12px) clamp(16px, 4vw, 24px);
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: clamp(12px, 3vw, 16px);
+    display: inline-block;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-btn:hover {
+    background: #e1acb7 !important; /* ini pink cerah yaa */
+    color: black !important;
+    text-decoration: none;
+}
+
+}
+
+
+        
+        @media (max-width: 768px) {
+            .home-content {
+                text-align: center;
+            }
+            
+            .decoration-image {
+                display: block;
+                margin: 0 auto clamp(20px, 4vw, 40px) auto;
+            }
+            
+            .skills-image {
+                margin: clamp(20px, 4vh, 30px) 0;
+            }
+            
+            .about-detail {
+                margin-left: clamp(10px, 2vw, 20px);
+            }
+        }
+        
+
+        @media (max-width: 576px) {
+            .container-responsive {
+                padding: 0 clamp(15px, 5vw, 30px);
+            }
+            
+            .home-subtitle {
+                font-size: clamp(14px, 5vw, 20px);
+            }
+            
+            .about-text {
+                font-size: clamp(14px, 5vw, 20px);
+            }
+            
+            .about-detail {
+                font-size: clamp(12px, 4vw, 18px);
+                margin-left: clamp(10px, 2vw, 15px);
+            }
+            
+            .section-title {
+                font-size: clamp(28px, 9vw, 48px);
+            }
+        }
+        
+
+        @media (min-width: 1400px) {
+            .container-responsive {
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
